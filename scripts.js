@@ -57,22 +57,25 @@ let json = {
 /*---------------------------------------------
 Write Your Javascript Code Below
 ---------------------------------------------*/
+//creating the title
 let title = document.createElement('h1')
 let tileContainer = document.getElementById('tiles-342')
 title.setAttribute('id', 'title')
 title.textContent = json.options.header
 tileContainer.appendChild(title)
 
+//creating the paragraph
 let paragraph = document.createElement('p')
 paragraph.setAttribute('id', 'paragraph')
 paragraph.textContent = json.options.description
 tileContainer.appendChild(paragraph)
 
+//creating the horizontal row
 let hr = document.createElement('hr')
 tileContainer.appendChild(hr)
 
+//for each loop to create tiles
 let records = json.records
-// console.log(record)
 records.forEach(record => {
     let tileContainer = document.getElementById('tiles-342')
     let tile = document.createElement('div')
